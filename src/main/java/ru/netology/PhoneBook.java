@@ -32,4 +32,8 @@ public class PhoneBook {
         return getName.orElse("");
     }
 
+    public String findByName(String contactName) {
+        return null;
+    }
+
 }

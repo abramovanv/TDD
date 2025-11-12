@@ -22,5 +22,14 @@ public class PhoneBookTest {
         Assertions.assertEquals("Ivan", result);
     }
 
+    @Test
+    @DisplayName("Поиск номера телефона по контакту")
+    public void testFindNumber_forContactName_success() {
+
+        PhoneBook.getInstance().add("Ivan", "11111");
+        String result = PhoneBook.getInstance().findByName("Ivan");
+        Assertions.assertEquals("11111", result);
+    }
+
 
 }
