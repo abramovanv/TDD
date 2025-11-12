@@ -2,6 +2,7 @@ package ru.netology;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class PhoneBook {
     Map<String, String> phoneBook = new HashMap<>();
@@ -24,7 +25,11 @@ public class PhoneBook {
     }
 
     public String findByNumber(String phoneNum) {
-        return null;
+        Optional<String> getName = phoneBook.entrySet().stream()
+                .filter(n -> n.getValue().equals(phoneNum))
+                .map(Map.Entry::getKey)
+                .findFirst();
+        return getName.orElse("");
     }
 
 }
