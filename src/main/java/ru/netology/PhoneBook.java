@@ -3,6 +3,7 @@ package ru.netology;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import java.util.TreeMap;
 
 public class PhoneBook {
     Map<String, String> phoneBook = new HashMap<>();
@@ -33,7 +34,11 @@ public class PhoneBook {
     }
 
     public String findByName(String contactName) {
-        return  phoneBook.get(contactName);
+        return phoneBook.get(contactName);
+    }
+
+    public String printAllNames() {
+        return null;
     }
 
 }

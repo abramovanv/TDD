@@ -31,5 +31,15 @@ public class PhoneBookTest {
         Assertions.assertEquals("11111", result);
     }
 
+    @Test
+    @DisplayName("Отсортированный список")
+    public void testPrintContacts_success() {
+
+        PhoneBook.getInstance().add("Ivan", "11111");
+        PhoneBook.getInstance().add("Andrei", "2222");
+        String result = PhoneBook.getInstance().printAllNames();
+        Assertions.assertEquals("[Andrei, Ivan]", result);
+    }
+
 
 }
