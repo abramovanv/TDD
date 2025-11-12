@@ -38,7 +38,10 @@ public class PhoneBook {
     }
 
     public String printAllNames() {
-        return null;
+        String s;
+        Map<String, String> sortedMap = new TreeMap<>(phoneBook);
+        s = sortedMap.keySet().toString();
+        return s;
     }
 
 }
