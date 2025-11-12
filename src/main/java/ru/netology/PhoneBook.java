@@ -33,7 +33,7 @@ public class PhoneBook {
     }
 
     public String findByName(String contactName) {
-        return null;
+        return  phoneBook.get(contactName);
     }
 
 }
