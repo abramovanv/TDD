@@ -1,9 +1,26 @@
 package ru.netology;
 
-public class PhoneBook {
+import java.util.HashMap;
+import java.util.Map;
 
-    public int add(){
-        return 0;
+public class PhoneBook {
+    Map<String, String> phoneBook = new HashMap<>();
+
+    private static PhoneBook INSTANCE;
+
+    private PhoneBook() {
+    }
+
+    public static PhoneBook getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new PhoneBook();
+        }
+        return INSTANCE;
+    }
+
+    public int add(String name, String phoneNum) {
+        phoneBook.put(name, phoneNum);
+        return phoneBook.size();
     }
 
 }

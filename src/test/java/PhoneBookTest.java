@@ -9,7 +9,7 @@ public class PhoneBookTest {
     @DisplayName("Проверяем добавление номера в телефонную книгу")
     public void testAddPhone_validArgument_success() {
 
-        int result = new PhoneBook().add();  // when:
+        int result = PhoneBook.getInstance().add("Ivan", "11111");  // when:
         Assertions.assertEquals(1, result);
     }
 }
